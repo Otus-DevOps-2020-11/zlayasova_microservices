@@ -1,0 +1,53 @@
+version: '3.4'
+services:
+  post_db:
+    image: mongo:3.2
+    volumes:
+      - post_db:/data/db
+    networks:
+      back_net:
+        aliases:
+          - post_db
+          - comment_db
+  ui:
+    image: zlayasova/ui:1.0
+    volumes:
+      - ui_service:/app
+    ports:
+      - 9292:9292
+    networks:
+      - front_net
+    command: puma --debug -w 2
+  post:
+    image: zlayasova/post:1.0
+    volumes:
+      - post_service:/app
+    networks:
+      - front_net
+      - back_net
+  comment:
+    image: zlayasova/comment:1.0
+    networks:
+      - back_net
+      - front_net
+    command: puma --debug -w 2
+
+volumes:
+  post_db:
+  ui_service:
+  post_service:
+
+networks:
+  #  reddit:
+  front_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.1.0/24
+          gateway: 10.0.1.1
+  back_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.2.0/24
+          gateway: 10.0.2.1
