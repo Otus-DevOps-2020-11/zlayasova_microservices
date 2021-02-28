@@ -16,4 +16,4 @@ ansible/vault.key
 .molecule
 .cache
 .pytest_cache
-./src/variables.env
+./src/.env
