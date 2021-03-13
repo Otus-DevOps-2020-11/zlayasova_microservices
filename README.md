@@ -30,3 +30,13 @@ docker-compose -f docker-compose.override.yml -p micro up -d
 Дополнительно задание:
 
 Создан файл docker-compose.override.yml для проекта reddit без сборки образа и с запуском puma в дебаг режиме.
+
+Homework №17
+
+Основное задание:
+
+Прохождение практики по настройке сервиса мониторинга prometheus и подключения к нему таргетов.
+
+Дополнительное задание:
+
+Добавлены Dockerfile для сборки docker-образов blackbox-exporter и mongodb-exporter. Создан Makefile для сборки и отправки образов в докер хаб.
