@@ -40,3 +40,18 @@ Homework №17
 Дополнительное задание:
 
 Добавлены Dockerfile для сборки docker-образов blackbox-exporter и mongodb-exporter. Создан Makefile для сборки и отправки образов в докер хаб.
+
+Homework №18
+
+Основное задание:
+
+Прохождение практики по настройке сервисов мониторинга grafana, alertmanager. Так же к prometheus подключен экспортер cadvisor.
+
+Запушены образы сервисов:
+https://hub.docker.com/repository/docker/zlayasova/ui
+https://hub.docker.com/repository/docker/zlayasova/post
+https://hub.docker.com/repository/docker/zlayasova/comment
+https://hub.docker.com/repository/docker/zlayasova/prometheus
+https://hub.docker.com/repository/docker/zlayasova/blackbox-exporter
+https://hub.docker.com/repository/docker/zlayasova/mongodb_exporter
+https://hub.docker.com/repository/docker/zlayasova/alertmanager
