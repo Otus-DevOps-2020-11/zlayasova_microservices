@@ -55,3 +55,7 @@ https://hub.docker.com/repository/docker/zlayasova/prometheus
 https://hub.docker.com/repository/docker/zlayasova/blackbox-exporter
 https://hub.docker.com/repository/docker/zlayasova/mongodb_exporter
 https://hub.docker.com/repository/docker/zlayasova/alertmanager
+
+Homeowkr №19
+
+Прохождение практики по настройке сервисов логирования и подключения к ним сервисов.
