@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo
+  name: mongo-gce-pd-storage #Из-за теста. Вернуть на mongo
   labels:
     app: reddit
     component: mongo
